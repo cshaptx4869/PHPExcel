@@ -1,3 +1,4 @@
+<?php
 require_once './phpexcel/PHPExcel.php';
 
 // 首先创建一个新的对象  PHPExcel object
