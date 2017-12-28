@@ -236,7 +236,7 @@ $objDrawing->setRotation(25); //设置图片所在单元格的格式
 $objDrawing->setHeight(36); //设置图片高度
 $objDrawing->getShadow()->setVisible (true ); //设置图片所在单元格的格式
 $objDrawing->getShadow()->setDirection(45);  //设置图片所在单元格的格式
-$objDrawing->setWorksheet($objPHPExcel->getActiveSheet()); //设置图片所在单元格的格式
+$objDrawing->setWorksheet($objPHPExcel->getActiveSheet()); 
 //还可以添加有gd库生产的图片，详细见自带实例25
 
 创建一个新工作表和设置工作表标签颜色     锚：bbb
