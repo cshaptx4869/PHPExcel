@@ -395,3 +395,26 @@ foreach($data as $r => $dataRow) {
       $objPHPExcel->getActiveSheet()->setCellValue( 'E'.$row, '=C'.$row.'*D' .$row);
 }
 $objPHPExcel->getActiveSheet()->removeRow($baseRow-1,1);     //最后删去第4行，这是示例需要，在此处为大家提供删除实例
+
+      
+/*小栗子*/
+include(dirname(__FILE__).'/phpexcel/PHPExcel.php');
+
+$Obj = new PHPExcel_Reader_Excel5();
+$Obj->setReadDataOnly(true);
+      
+$phpExcel = $Obj->load(dirname(__FILE__).'/output.xls');  //读取demo.xls文件
+$objWorksheet = $phpExcel->getActiveSheet(); //获取当前活动sheet
+$highestRow = $objWorksheet->getHighestRow(); //获取行数
+//获取列数
+$highestColumn = $objWorksheet->getHighestColumn();
+$highestColumnIndex = PHPExcel_Cell::columnIndexFromString($highestColumn);
+//循环输出数据
+$data = array();
+for($row = 1; $row <= $highestRow; ++$row) {
+      for($col = 0; $col < $highestColumnIndex; ++$col) {
+        $val = $objWorksheet->getCellByColumnAndRow($col, $row)->getValue();
+        $data[$row][$col] = trim($val);
+      }
+}
+    
