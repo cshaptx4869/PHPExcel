@@ -231,12 +231,12 @@ $objDrawing->setName('Paid');
 $objDrawing->setDescription('Paid');
 $objDrawing->setPath('./images/paid.png'); //图片引入位置
 $objDrawing->setCoordinates('B15'); //图片添加位置
-$objDrawing->setOffsetX(210);
-$objDrawing->setRotation(25); 
-$objDrawing->setHeight(36);
-$objDrawing->getShadow()->setVisible (true );
-$objDrawing->getShadow()->setDirection(45);
-$objDrawing->setWorksheet($objPHPExcel->getActiveSheet());
+$objDrawing->setOffsetX(210); //设置图片所在单元格的格式
+$objDrawing->setRotation(25); //设置图片所在单元格的格式
+$objDrawing->setHeight(36); //设置图片高度
+$objDrawing->getShadow()->setVisible (true ); //设置图片所在单元格的格式
+$objDrawing->getShadow()->setDirection(45);  //设置图片所在单元格的格式
+$objDrawing->setWorksheet($objPHPExcel->getActiveSheet()); //设置图片所在单元格的格式
 //还可以添加有gd库生产的图片，详细见自带实例25
 
 创建一个新工作表和设置工作表标签颜色     锚：bbb
