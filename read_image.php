@@ -34,7 +34,7 @@ function getExtendFileName($file_name) {
 function extractImageFromWorksheet($worksheet,$basePath){    
      
     $result = array();    
-     
+      
     $imageFileName = "";    
      
     foreach ($worksheet->getDrawingCollection() as $drawing) {    
