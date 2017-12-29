@@ -53,7 +53,7 @@ function extractImageFromWorksheet($worksheet,$basePath){
      
             $result[$xy] = $path;    
      
-          
+          // for xls
         } else if ($drawing instanceof PHPExcel_Worksheet_MemoryDrawing) {    
      
             $image = $drawing->getImageResource();    
