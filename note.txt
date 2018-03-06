@@ -39,3 +39,6 @@ VCS -> checkout from version control -> github -> login -> clone
     选中文件右键—>Git—>Show History。
 4.报错处理。repository test has failed
 一般是因为PHPstorm中git执行文件路径错误。仔细检查git.exe路径是否是正确安装路径。
+5.添加到terminal
+点击file下的Tools并点击Terminal并在shell path中选择你所安装的shell路径选择好后并在路径后面添加--login-i
+点击OK重启一下phpstorm编辑软件点击软件底部Terminal的可以看到git环境搭建成功的界面
