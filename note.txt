@@ -1,0 +1,41 @@
+phpstrom 使用 git 管理
+一.准备工作：
+1.安装git客户端（没有的话无法执行git操作）
+在windows下安装GIT非常简单，首先下载安装包，地址：https://git-for-windows.github.io/
+然后双击安装，一路下一步即可，需要记住安装位置。
+2.拥有GitHub账号（没有的自行注册https://github.com/）
+  拥有PhpStorm（没有的自行安装）
+
+二.推送代码到服务器操作步骤：
+1.登录GitHub网站，新建一个仓库。
+例如：test0206。此时代码库没有任何代码。
+（备注：当然也可以使用PhpStorm创建新的代码仓库，不过不是称为创建，而是分享。
+VCS—>Import into Version Control—>Share Project on GitHub。此处推荐在GitHub网站上操作）
+2.打开PhpStorm，配置git执行文件路径。
+  在git安装目录下找到git.exe即可。点击test测试一下。成功后点击OK保存。
+file -> settings -> version control -> git
+3.配置GitHub项目地址，创建本地项目
+VCS -> checkout from version control -> github -> login -> clone
+点击clone，会把GitHub上的项目复制到本地。
+4.新建文件并上传到仓库。
+    4,1.新建test.php文件，此时文件颜色显示为红色。
+    4.2.添加代码到本地。
+        选中文件右键—>Git—>Add。此时文件显示为绿色。
+    4.3.提交代码到本地版本库。
+        选中文件右键—>Git—>Commit File。需要注意的是，该提交动作只是把代码提交到本地的git版本库，并没有提交的GitHub的服务器上。需要进一步的push操作，才可完成上传代码到服务器。此时文件显示为白色。
+    4.4.推送代码到GitHub服务器。
+        选中文件右键—>Git—>Repository—>Push。选中提交的代码，推送到服务器。刷新浏览器，即可查看到推送来的代码。
+
+三.其他操作：
+1.从服务器代码仓库拉取代码。
+选中项目文件右键—>Git—>Repository—>Pull。即可拉取服务器代码到本地，实现更新本地代码。
+2.上传项目框架到服务器代码库。
+    首先复制框架代码到本地，然后添加代码到本地版本库，最后推送到服务器代码库。
+    1.选中项目test0206右键—>Git—>Add。
+    2.选中项目test0206右键—>Git—>Commit Directory。
+    3.选中项目test0206右键—>Git—>Repository—>Push。
+    刷新浏览器即可查看到刚上传的项目框架。
+3.查看版本历史。
+    选中文件右键—>Git—>Show History。
+4.报错处理。repository test has failed
+一般是因为PHPstorm中git执行文件路径错误。仔细检查git.exe路径是否是正确安装路径。
